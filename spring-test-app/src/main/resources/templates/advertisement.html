@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:dt="http://www.thymeleaf.org/dandelion/datatables">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>Users</h2>
+<table border="1" style="width: 300px">
+    <tr>
+        <th>ID</th>
+        <th>UserId</th>
+        <th>Title</th>
+    </tr>
+    <tr th:each="ad : ${ads}">
+    	<td th:text="${ad.id}"></td> 
+       <td th:text="${ad.userid}"></td> 
+       <td th:text="${ad.title}"></td> 
+    </tr>
+</table>
+</body>
+</html>
